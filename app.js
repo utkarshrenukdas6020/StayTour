@@ -1,7 +1,4 @@
 require("dotenv").config();
-console.log("MongoDB URL:", process.env.MONGO_URL);
-console.log("Port:", process.env.PORT);
-console.log("Session Secret:", process.env.SESSION_SECRET);
 
 const express = require("express");
 const mongoose = require("mongoose");

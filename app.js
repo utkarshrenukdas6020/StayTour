@@ -28,9 +28,22 @@ const PORT = process.env.PORT || 10000;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
 // MongoDB Connection
-mongoose.connect(MONGO_URL)
-  .then(() => console.log("Connected to DB"))
-  .catch(err => console.log(err));
+// mongoose.connect(MONGO_URL)
+//   .then(() => console.log("Connected to DB"))
+//   .catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect(MONGO_URL);
+}
+
+main()
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch((e) => {
+    console.log("Error connecting to DB:", e);
+  });
+
 
 // Middleware & Configurations
 app.set("view engine", "ejs");

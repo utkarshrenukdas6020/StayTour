@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      
+        <div class="navbar-nav">
+
+          <a class="nav-link name" href="/listings"><i>StayTour</i></a>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search destination">
+            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">StayTour your home</a>
+        
+          <!-- User Dropdown with Icons -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- SVG User Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+        
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <% if (!currUser) { %>
+                <li><a class="dropdown-item" href="/signup"><b>Sign Up</b></a></li>
+                <li><a class="dropdown-item" href="/login"><b>Login</b></a></li>
+              <% } else { %>
+                <li><a class="dropdown-item" href="/logout"><b>Logout</b></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .search-btn{
+      background-color: #fe424d;
+      color: #fff;
+      border-radius: 25px;
+      padding: 0 1rem 0 1rem;
+    }
+
+    .search-btn:hover{
+      background-color: #fe424d;
+      color: #fff;
+    }
+
+    .search-btn i{
+      display: inline;
+      margin-right: 0.5rem;
+    }
+
+    .search-input{
+       border-radius: 25px;
+       padding: 0.5rem 3rem 0.5rem 3rem;
+       border: 1px solid black;
+    }
+     .name{
+     font-size: 40px;
+     color:  #fe424d;
+    }
+    
+    .name:hover{
+     font-size: 40px;
+     color:  #fe424d;
+    }
+    
+  </style>

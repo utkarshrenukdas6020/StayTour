@@ -1,4 +1,8 @@
 require("dotenv").config();
+console.log("MongoDB URL:", process.env.MONGO_URL);
+console.log("Port:", process.env.PORT);
+console.log("Session Secret:", process.env.SESSION_SECRET);
+
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -20,7 +24,7 @@ const app = express();
 
 // Environment Variables
 const MONGO_URL = process.env.MONGO_URL;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 10000;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
 // MongoDB Connection
